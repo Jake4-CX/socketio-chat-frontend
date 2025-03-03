@@ -61,7 +61,7 @@
                   </ScrollPane>
                   <HBox alignment="CENTER" prefHeight="27.0" prefWidth="177.0" spacing="6.0">
                      <children>
-                        <Button fx:id="buttonLeaveRoom" mnemonicParsing="false" text="Leave Room" disable="true" />
+                        <Button fx:id="buttonLeaveRoom" disable="true" mnemonicParsing="false" text="Leave Room" />
                         <Button fx:id="buttonJoinRoom" mnemonicParsing="false" text="Join Room" />
                      </children>
                      <padding>
@@ -72,5 +72,10 @@
             </VBox>
          </children>
       </AnchorPane>
+      <Label fx:id="labelLoggedInAs" alignment="CENTER_RIGHT" layoutX="144.0" layoutY="2.0" prefHeight="17.0" prefWidth="386.0" text="Logged in as: ${name}" textAlignment="RIGHT">
+         <padding>
+            <Insets right="6.0" />
+         </padding>
+      </Label>
    </children>
 </AnchorPane>

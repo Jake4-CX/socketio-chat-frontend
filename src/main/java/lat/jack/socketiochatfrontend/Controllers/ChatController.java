@@ -51,6 +51,9 @@ public class ChatController extends ToasterController {
     private Button buttonSendMessage;
 
     @FXML
+    private Label labelLoggedInAs;
+
+    @FXML
     protected void initialize() {
         System.out.println("ChatView initialized!");
 
@@ -58,6 +61,8 @@ public class ChatController extends ToasterController {
 
         SocketManager socketManager = SocketManager.getInstance();
         Socket socket = socketManager.getSocket();
+
+        labelLoggedInAs.setText("Logged in as: " + socketManager.getCurrentUser().getUsername());
 
         if (socketManager.getSocket() != null) {
             populateRoomList(socketManager.getAvailableRooms());
